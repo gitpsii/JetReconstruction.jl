@@ -76,9 +76,22 @@ If it takes a while to develop or implement review changes, rebase against
 
 ### Formatting
 
-The code in this repository is formatted with
-[`JuliaFormatter`](https://github.com/domluna/JuliaFormatter.jl). Currently we
-use *version 1* of the formatter so please use this too or the CI may complain.
+### Formatting
+
+The code in this repository is formatted with [`Runic.jl`](https://github.com/fredrikekre/Runic.jl). Before submitting your pull request, please format your changes locally by running the appropriate command from the root directory of the project:
+
+**For Julia v1.12 and later:**
+```bash
+julia -e 'using Pkg; Pkg.Apps.add("Runic")'
+runic --inplace .
+```
+
+**For Julia v1.11 and earlier:**
+```bash
+julia --project=@runic -e 'using Pkg; Pkg.add("Runic")'
+~/.julia/bin/runic --inplace .
+```
+
 
 #### Bootstrap
 
