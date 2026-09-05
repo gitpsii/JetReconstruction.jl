@@ -150,7 +150,7 @@ updating too.** This is easy to miss and the failure shows up late.
 
 - **Formatter**: [Runic.jl](https://github.com/fredrikekre/Runic.jl). Runic uses a zero-configuration philosophy with standardized, universal formatting rules rather than configuration files.
   - **Execution Commands**: For Julia v1.12+, run `runic --inplace .`. For Julia v1.11 and earlier, run `~/.julia/bin/runic --inplace .`.
-  - **CI Pipeline**: Formatting checks are rigidly validated via `.github/workflows/RunicFormat.yml`.
+  - **CI Pipeline**: Formatting checks are rigidly validated via `.github/workflows/RunicFormat.yml`. Do not include .git-blame-ignore-revs updates in general pull requests.
 - **Naming**: Follow [Julia guidelines](https://docs.julialang.org/en/v1/manual/style-guide/): snake_case for functions, PascalCase for types.
 - **Type annotations**:
   - Be as concrete as possible with *data members* (use parametrisation if it is needed), do not use abstract data members as these have poor performance
